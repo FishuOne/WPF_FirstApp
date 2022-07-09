@@ -1,0 +1,16 @@
+﻿<Window x:Class="WhatLanguage.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WhatLanguage"
+        mc:Ignorable="d"
+        Title="C#" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="cb42003a-9b4f-445b-93a9-a6cd5511bf02_cover.jpg"/>
+        </Grid.Background>
+        <Button Content="Take me back!" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="128" Background="Red" FontSize="16" Margin="665,0,0,0" Click="BackToMain"/>
+
+    </Grid>
+</Window>
