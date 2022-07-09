@@ -5,12 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WhatLanguage"
         mc:Ignorable="d"
-        Title="C#" Height="450" Width="800">
+        Title="C#" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="langViewSource" d:DesignSource="{d:DesignInstance {x:Type local:Lang}, CreateList=True}"/>
+        <CollectionViewSource x:Key="langFrameworkViewSource" Source="{Binding Framework, Source={StaticResource langViewSource}}"/>
+        <CollectionViewSource x:Key="frameworkViewSource" d:DesignSource="{d:DesignInstance {x:Type local:Framework}, CreateList=True}"/>
+    </Window.Resources>
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="cb42003a-9b4f-445b-93a9-a6cd5511bf02_cover.jpg"/>
         </Grid.Background>
         <Button Content="Take me back!" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="128" Background="Red" FontSize="16" Margin="665,0,0,0" Click="BackToMain"/>
+        <Grid x:Name="grid1" DataContext="{StaticResource frameworkViewSource}" HorizontalAlignment="Left" Margin="358,142,0,0" VerticalAlignment="Top" Background="#7F898989">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="Framework 1:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="framework1TextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding Framework1, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="id:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
+            <TextBox x:Name="idTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="1" Text="{Binding id, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="id lang:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="id_langTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="2" Text="{Binding id_lang, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+        </Grid>
 
     </Grid>
+
 </Window>
