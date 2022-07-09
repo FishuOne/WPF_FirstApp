@@ -23,6 +23,8 @@ namespace WhatLanguage
     {
         OOProjectEntities context = new OOProjectEntities();
         CollectionViewSource langViewSource;
+        CollectionViewSource techViewSource;
+
         /// <summary>
         /// Initializing Data
         /// </summary>
@@ -30,12 +32,17 @@ namespace WhatLanguage
         {
             InitializeComponent();
             langViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("langViewSource1")));
+            techViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("techViewSource")));
             DataContext = this;
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             context.Lang.Load();
             langViewSource.Source = context.Lang.Local;
+            context.Tech.Load();
+            techViewSource.Source = context.Tech.Local;
+            // Load data by setting the CollectionViewSource.Source property:
+            // techViewSource.Source = [generic data source]
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -55,6 +62,11 @@ namespace WhatLanguage
             Window2 objWin2 = new Window2();
             this.Visibility = Visibility.Hidden;
             objWin2.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            techViewSource.View.MoveCurrentToNext();
         }
     }
 }

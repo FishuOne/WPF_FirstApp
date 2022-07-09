@@ -44,5 +44,17 @@ namespace WhatLanguage
             this.Visibility = Visibility.Hidden;
             objMW.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+           // var queryLangID = (from c in context.Tech where c.id_lang == 1 select c);
+           // if (queryLangID != null)
+
+                ideViewSource.View.MoveCurrentToNext();
+
+
+
+                frameworkViewSource.View.MoveCurrentToNext();
+        }
     }
 }

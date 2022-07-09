@@ -30,7 +30,7 @@
             <Label Content="Framework 1:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <TextBox x:Name="framework1TextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding Framework1, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
-        <Grid x:Name="grid2" DataContext="{StaticResource ideViewSource}" HorizontalAlignment="Left" Margin="47,329,0,0" VerticalAlignment="Top" Background="#7FB1B1B1">
+        <Grid x:Name="grid2" DataContext="{StaticResource ideViewSource}" HorizontalAlignment="Left" Margin="47,329,0,0" VerticalAlignment="Top" Background="#7FB1B1B1" Width="245">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0"/>
                 <ColumnDefinition Width="46"/>
@@ -43,10 +43,11 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Label Content="Cost:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="0" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
-            <TextBox x:Name="costTextBox" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="3,4,0,4" Grid.Row="0" Text="{Binding Cost, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <TextBox x:Name="costTextBox" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="2.667,4,-64.333,4" Grid.Row="0" Text="{Binding Cost, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="185"/>
             <Label Content="IDE 1:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="3" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
-            <TextBox x:Name="iDE1TextBox" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="3,4,0,4" Grid.Row="3" Text="{Binding IDE1, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <TextBox x:Name="iDE1TextBox" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="2.667,4,-64.333,4" Grid.Row="3" Text="{Binding IDE1, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="185"/>
         </Grid>
+        <Button Content="Do not press" HorizontalAlignment="Left" VerticalAlignment="Top" Width="117" Margin="327,314,0,0" Height="79" Background="#FF5E8B70" Click="Button_Click"/>
 
     </Grid>
 

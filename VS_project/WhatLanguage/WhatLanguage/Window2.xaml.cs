@@ -45,5 +45,16 @@ namespace WhatLanguage
             objMW.Show();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+
+
+            ideViewSource.View.MoveCurrentToNext();
+
+
+
+            frameworkViewSource.View.MoveCurrentToNext();
+        }
     }
 }
