@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WhatLanguage.Properties
+namespace WhatLanguage
 {
     using System;
     using System.Collections.ObjectModel;
