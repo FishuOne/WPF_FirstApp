@@ -22,13 +22,22 @@ namespace WhatLanguage
     {
         OOProjectEntities context = new OOProjectEntities();
         CollectionViewSource frameworkViewSource;
+        CollectionViewSource ideViewSource;
         public Window2()
         {
             InitializeComponent();
             frameworkViewSource = (frameworkViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("frameworkViewSource"))));
+            ideViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("ideViewSource")));
             DataContext = this;
         }
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            context.Framework.Load();
+            context.Ide.Load();
+            frameworkViewSource.Source = context.Framework.Local;
+            ideViewSource.Source = context.Ide.Local;
+        }
         private void BackToMainn(object sender, RoutedEventArgs e)
         {
             MainWindow objMW = new MainWindow();
@@ -36,13 +45,5 @@ namespace WhatLanguage
             objMW.Show();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            context.Framework.Load();
-            frameworkViewSource.Source = context.Framework.Local;
-            //System.Windows.Data.CollectionViewSource frameworkViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("frameworkViewSource")));
-            // Load data by setting the CollectionViewSource.Source property:
-            // frameworkViewSource.Source = [generic data source]
-        }
     }
 }

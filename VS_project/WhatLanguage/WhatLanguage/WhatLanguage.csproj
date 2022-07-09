@@ -164,6 +164,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Framework.datasource" />
+    <None Include="Properties\DataSources\Ide.datasource" />
     <None Include="Properties\DataSources\Lang.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
