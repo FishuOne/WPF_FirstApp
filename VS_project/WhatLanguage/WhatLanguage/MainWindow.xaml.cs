@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.Entity;
 
 namespace WhatLanguage
 {
@@ -20,9 +21,23 @@ namespace WhatLanguage
     /// </summary>
     public partial class MainWindow : Window
     {
+        OOProjectEntities context = new OOProjectEntities();
+        CollectionViewSource langViewSource;
+
         public MainWindow()
         {
             InitializeComponent();
+            langViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("langViewSource1")));
+            DataContext = this;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            context.Lang.Load();
+            langViewSource.Source = context.Lang.Local;
+
+            // Load data by setting the CollectionViewSource.Source property:
+            // langViewSource1.Source = [generic data source]
         }
     }
 }

@@ -81,6 +81,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="OOProjectDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OOProjectDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Tech.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -132,7 +137,19 @@
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
+    <None Include="OOProjectDataSet.xsc">
+      <DependentUpon>OOProjectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OOProjectDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OOProjectDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OOProjectDataSet.xss">
+      <DependentUpon>OOProjectDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Lang.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WhatLanguage"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="#FF272525">
-    <Grid>
-        
+        Title="MainWindow" Height="450" Width="800" Background="#FF272525" Loaded="Window_Loaded">
+    <Window.Resources>
+        <local:OOProjectDataSet x:Key="oOProjectDataSet"/>
+        <CollectionViewSource x:Key="langViewSource" Source="{Binding Lang, Source={StaticResource oOProjectDataSet}}"/>
+        <CollectionViewSource x:Key="frameworkViewSource" Source="{Binding Framework, Source={StaticResource oOProjectDataSet}}"/>
+        <CollectionViewSource x:Key="ideViewSource" Source="{Binding Ide, Source={StaticResource oOProjectDataSet}}"/>
+        <CollectionViewSource x:Key="langViewSource1" d:DesignSource="{d:DesignInstance {x:Type local:Lang}, CreateList=True}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource langViewSource}">
+        <Grid x:Name="grid1" DataContext="{StaticResource langViewSource1}" HorizontalAlignment="Left" Margin="231,171,0,0" VerticalAlignment="Top">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF484242" Offset="0"/>
+                    <GradientStop Color="#FF484242" Offset="1"/>
+                    <GradientStop Color="#FFAAA3A3" Offset="0.516"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="id:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="idTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding id, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Language:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
+            <TextBox x:Name="languageTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="1" Text="{Binding Language, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+        </Grid>
     </Grid>
 </Window>
