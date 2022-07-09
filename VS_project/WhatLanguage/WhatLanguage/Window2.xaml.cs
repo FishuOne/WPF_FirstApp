@@ -23,6 +23,9 @@ namespace WhatLanguage
         OOProjectEntities context = new OOProjectEntities();
         CollectionViewSource frameworkViewSource;
         CollectionViewSource ideViewSource;
+        /// <summary>
+        /// Initializing Data
+        /// </summary>
         public Window2()
         {
             InitializeComponent();
@@ -49,12 +52,14 @@ namespace WhatLanguage
         {
 
 
-
             ideViewSource.View.MoveCurrentToNext();
-
+            if (ideViewSource.View.IsCurrentAfterLast == true)
+                ideViewSource.View.MoveCurrentToFirst();
 
 
             frameworkViewSource.View.MoveCurrentToNext();
+            if (frameworkViewSource.View.IsCurrentAfterLast == true)
+                frameworkViewSource.View.MoveCurrentToFirst();
         }
     }
 }

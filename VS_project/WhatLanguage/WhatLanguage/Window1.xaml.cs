@@ -23,6 +23,10 @@ namespace WhatLanguage
         OOProjectEntities context = new OOProjectEntities();
         CollectionViewSource frameworkViewSource;
         CollectionViewSource ideViewSource;
+
+        /// <summary>
+        /// Initializing Data
+        /// </summary>
         public Window1()
         {
             InitializeComponent();
@@ -44,17 +48,40 @@ namespace WhatLanguage
             this.Visibility = Visibility.Hidden;
             objMW.Show();
         }
-
+        int i = 1;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           // var queryLangID = (from c in context.Tech where c.id_lang == 1 select c);
-           // if (queryLangID != null)
 
-                ideViewSource.View.MoveCurrentToNext();
+            //    var queryLanhIdChecker = (from b in context.Ide where b.id_lang == 2 && b.id == i select b);
+            //while (queryLanhIdChecker != null)
+            //{
+            //    //if (ideViewSource.View.IsCurrentAfterLast)
+            //    //{
+            //    //    ideViewSource.View.MoveCurrentToFirst();
+            //    //        i = 1;
+            //    //    queryLanhIdChecker = (from b in context.Ide where b.id_lang == 2 && b.id == i select b);
+            //    //    while (queryLanhIdChecker != null)
+            //    //        {
+            //    //        ideViewSource.View.MoveCurrentToNext();
+            //    //        i++;
+
+            //    //        }
+            //    //}
+
+            //    ideViewSource.View.MoveCurrentToNext();
+            //    i++;
+            //    queryLanhIdChecker = (from b in context.Ide where b.id_lang == 2 && b.id == i select b);
+            //}
 
 
+            ideViewSource.View.MoveCurrentToNext();
+            if (ideViewSource.View.IsCurrentAfterLast == true)
+                ideViewSource.View.MoveCurrentToFirst();
 
-                frameworkViewSource.View.MoveCurrentToNext();
+
+            frameworkViewSource.View.MoveCurrentToNext();
+            if (frameworkViewSource.View.IsCurrentAfterLast == true)
+                frameworkViewSource.View.MoveCurrentToFirst();
         }
     }
 }

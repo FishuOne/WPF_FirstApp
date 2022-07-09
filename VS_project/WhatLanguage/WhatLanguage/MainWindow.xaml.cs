@@ -67,6 +67,8 @@ namespace WhatLanguage
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             techViewSource.View.MoveCurrentToNext();
+            if (techViewSource.View.IsCurrentAfterLast == true)
+                techViewSource.View.MoveCurrentToFirst();
         }
     }
 }
