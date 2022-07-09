@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WPF_Projekt_Semestralny.Properties
+namespace WhatLanguage.Properties
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class OOProjectEntities1 : DbContext
+    public partial class OOProjectEntities : DbContext
     {
-        public OOProjectEntities1()
-            : base("name=OOProjectEntities1")
+        public OOProjectEntities()
+            : base("name=OOProjectEntities")
         {
         }
     

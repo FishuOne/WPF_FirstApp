@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Lenovo\Desktop\Studia\sem4\OOP\Projekt_Semestralny\VS_project\WPF_App\WPF_Projekt_Semestralny\Properties\Model1.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Lenovo\Desktop\Studia\sem4\OOP\VS_project\WhatLanguage\WhatLanguage\Properties\Model1.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

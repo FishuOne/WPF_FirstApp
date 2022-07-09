@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WPF_Projekt_Semestralny.Properties
+namespace WhatLanguage.Properties
 {
     using System;
     using System.Collections.ObjectModel;
     
-    public partial class Tech
+    public partial class Framework
     {
         public int id { get; set; }
         public int id_lang { get; set; }
-        public string Technology { get; set; }
+        public string Framework1 { get; set; }
     
         public virtual Lang Lang { get; set; }
     }

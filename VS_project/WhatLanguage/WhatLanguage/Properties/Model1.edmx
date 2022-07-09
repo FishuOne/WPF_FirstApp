@@ -170,7 +170,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="OOProjectEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="OOProjectEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Framework" EntityType="Self.Framework" />
           <EntitySet Name="Ide" EntityType="Self.Ide" />
           <EntitySet Name="Lang" EntityType="Self.Lang" />
@@ -193,7 +193,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="OOProjectModelStoreContainer" CdmEntityContainer="OOProjectEntities1">
+        <EntityContainerMapping StorageEntityContainer="OOProjectModelStoreContainer" CdmEntityContainer="OOProjectEntities">
           <EntitySetMapping Name="Framework">
             <EntityTypeMapping TypeName="OOProjectModel.Framework">
               <MappingFragment StoreEntitySet="Framework">

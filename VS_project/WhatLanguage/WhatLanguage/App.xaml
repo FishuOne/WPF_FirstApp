@@ -1,7 +1,7 @@
-﻿<Application x:Class="WPF_Projekt_Semestralny.App"
+﻿<Application x:Class="WhatLanguage.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:WPF_Projekt_Semestralny"
+             xmlns:local="clr-namespace:WhatLanguage"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

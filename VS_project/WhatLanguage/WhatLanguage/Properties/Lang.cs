@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WPF_Projekt_Semestralny.Properties
+namespace WhatLanguage.Properties
 {
     using System;
     using System.Collections.ObjectModel;
